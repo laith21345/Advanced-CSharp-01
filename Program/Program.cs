@@ -85,46 +85,46 @@ namespace Program
             //If there is no such character, return 
             //Hint: you can use dictionary
 
-            int index = -1;
-            char? firstNonRepeatedChar = null;
+            //int index = -1;
+            //char? firstNonRepeatedChar = null;
 
-            Dictionary<char, int> dictionary;
+            //Dictionary<char, int> dictionary;
 
-            string str = Console.ReadLine() ?? "Default";
-            dictionary = new Dictionary<char, int>(str.Length);
+            //string str = Console.ReadLine() ?? "Default";
+            //dictionary = new Dictionary<char, int>(str.Length);
 
-            for (int i = 0; i < str.Length; i++)
-            {
-                char key = str[i];
+            //for (int i = 0; i < str.Length; i++)
+            //{
+            //    char key = str[i];
 
-                bool keyIsExist = dictionary.TryGetValue(key, out int value);
-                if (keyIsExist)
-                {
-                    dictionary[key] = value + 1;
-                }
-                else
-                {
-                    dictionary.Add(key, 0);
-                }
-            }
+            //    bool keyIsExist = dictionary.TryGetValue(key, out int value);
+            //    if (keyIsExist)
+            //    {
+            //        dictionary[key] = value + 1;
+            //    }
+            //    else
+            //    {
+            //        dictionary.Add(key, 0);
+            //    }
+            //}
 
-            for (int i = 0; i < str.Length; i++)
-            {
-                char key = str[i];
-                if (dictionary.ContainsKey(key))
-                {
-                    if (dictionary[key] == 0)
-                    {
-                        index = i;
-                        firstNonRepeatedChar = key;
-                        break;
-                    }
-                }
-            }
-            if (firstNonRepeatedChar != null)
-                Console.WriteLine($"the first non - repeated character is '{firstNonRepeatedChar}', at index :{index}");
-            else
-                Console.WriteLine("all chars are repeated");
+            //for (int i = 0; i < str.Length; i++)
+            //{
+            //    char key = str[i];
+            //    if (dictionary.ContainsKey(key))
+            //    {
+            //        if (dictionary[key] == 0)
+            //        {
+            //            index = i;
+            //            firstNonRepeatedChar = key;
+            //            break;
+            //        }
+            //    }
+            //}
+            //if (firstNonRepeatedChar != null)
+            //    Console.WriteLine($"the first non - repeated character is '{firstNonRepeatedChar}', at index :{index}");
+            //else
+            //    Console.WriteLine("all chars are repeated");
 
             #endregion
 
